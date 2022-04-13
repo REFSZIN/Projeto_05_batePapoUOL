@@ -33,6 +33,7 @@ nav{
     background-color: rgba(119, 116, 116, 0.5);
 }
 aside{
+    display: flex;
     width: 300px;
     position: relative;
     padding: 10px;
@@ -44,7 +45,7 @@ aside{
     border-radius: 6px;
     font-family: 'Roboto';
     font-style: normal;
-    font-weight: 600;
+    font-weight: 300;
     font-size: 18px;
     line-height: 35px;
     height: 85vh;
@@ -54,31 +55,27 @@ aside{
     border-radius: 31px 10px 12px 40px; 
 }
 .menu{
-    margin: 10px;
-    width: 300px;
-    display: flow-root;
-    text-align: start;
-}
-.menu:last-child{
+    margin-top: 40px;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: flex-start;
+    line-height: 10px;
+    width: 300px;
 }
 div > ion-icon:nth-child(1){
-    margin-top: 10px;
     width: 30px;
-    height: 30px;
+    height: 20px;
 }
 div > ion-icon:nth-child(3){
-    text-shadow: 0 0 10px rgb(20, 243, 0);
     color: green;
-    width: 50px;
+    width: 26px;
     height: 25px;
 }
 aside > ion-icon{
     position: absolute;
     right: 10px;
+    top: 5px;
     width: 30px;
     height: 30px;
 }
