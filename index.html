@@ -1,19 +1,91 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" type="image/x-icon" href="./assets/ico.ico">
-    <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="responsivo.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" type="image/x-icon" href="./assets/images/ico.ico">
+    <link rel="stylesheet" href="./assets/css/reset.css">
+    <link rel="stylesheet" href="./assets/css/responsivo.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
     <title>Bate-Papo UOL Projeto 5</title>
 </head>
 <body>
-    <img src="./assets/logo.png">
+    <nav class="login">
+        <div class="logo_login">
+            <img src="./assets/images/logo.png" alt="Logo Login">
+        </div>
+        <div class="input_login">
+            <input placeholder="Digite seu nome">
+        </div>
+        <div class="button_login">
+            <button>Entrar</button>
+        </div>
+    </nav>
+    <section class="aside">
+        <div class="transparencia"></div>
+        <aside>
+            <h4>Escolha um contato
+            <br>para enviar mensagem:</h4>
+            <article class="menu">
+                <div class="contatos">
+                    <ion-icon name="people"></ion-icon>
+                    <span>Todos</span>
+                </div>
+                <div class="contatos">
+                    <ion-icon name="person-circle"></ion-icon>
+                    <span>João</span>
+                </div>
+                <div class="contatos">
+                    <ion-icon name="person-circle"></ion-icon>
+                    <span>Maria</span>
+                </div>
+            </article>
+            <h4>Escolha a visibilidade:</h4>
+            <article class="menu">
+                <div class="publico">
+                    <ion-icon name="lock-closed"></ion-icon>
+                    <span>Público</span>
+                </div>
+                <div class="reservado">
+                    <ion-icon name="lock-open"></ion-icon>
+                    <span class="fix">Reservado</span>
+                </div>
+            </article>
+        </aside>
+    </section>
+    <header>
+        <img src="./assets/images/logo.png" alt="Logo">
+        <ion-icon name="people"></ion-icon>
+    </header>
+    <main>
+        <section class="conteiner">
+            <article class="log">
+                <span class="horario">(09:21:45)</span>
+                <h2 class="nome">João:</h2>
+                <h3 class="msg">entrou na sala...</h3>
+            </article>
+            <article class="global">
+                <span class="horario">(09:21:45)</span>
+                <h2 class="nome">João:</h2>
+                <h3 class="msg">Hi Guys (*￣3￣)╭</h3>
+            </article>
+            <article class="msgprive">
+                <span class="horario">(09:21:45)</span>
+                <h2 class="nome">João</h2>
+                <h2 class="nomeremetente"> para Maria:</h2>
+                <h3 class="msg">Cole Má</h3>
+            </article>
+        </section>
+    </main>
+    <footer class="sendmsg">
+        <ion-icon name="happy-outline"></ion-icon>
+        <input class="inputmsg" placeholder="Escreva aqui...">
+        <ion-icon class="icosendmsg" name="paper-plane-outline"></ion-icon>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-    <script src="script.js"></script>
+    <script src="./assets/js/script.js"></script>
 </body>
 </html>

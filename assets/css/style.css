@@ -1,0 +1,214 @@
+body{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+main{
+    width: 100vw;
+    height: 200px;
+    margin-top:100px;
+}
+nav{
+    top: 0px;
+    z-index: 3;
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: space-around;
+    background: rgb(242,225,123);
+    background: -moz-radial-gradient(circle, rgba(242,225,123,1) 0%, rgba(255,0,0,1) 69%, rgba(255,0,0,1) 76%);
+    background: -webkit-radial-gradient(circle, rgba(242,225,123,1) 0%, rgba(255,0,0,1) 69%, rgba(255,0,0,1) 76%);
+    background: radial-gradient(circle, rgba(242,225,123,1) 0%, rgba(255,0,0,1) 69%, rgba(255,0,0,1) 76%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#f2e17b",endColorstr="#ff0000",GradientType=1);
+}
+.logo_login{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+.input_login{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+.button_login{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+.button_login > button{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    background: #E7E7E7;
+    border-radius: 19px;
+    margin-top: 50px;
+    height: 40px;
+    width: 120px;
+}
+.input_login > input{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 25px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #AEAEAE;
+    margin-top: 100px;
+    border-radius: 19px;
+    height: 60px;
+    width: 240px;
+}
+.logo_login > img{
+    width: 200PX;
+    margin-top: 100px;
+}
+header{
+    position: fixed;
+    top: 0px;
+    z-index: 1;
+    left: 0px;
+    background: #FFFFFF;
+    box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.05);
+    width: 100vw;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+}
+header > img{
+    width: 90px;
+    height: 60px;
+    margin: 10px;
+}
+header > ion-icon{
+    width: 60px;
+    height: 50px;
+    margin: 18px;
+}
+footer{
+    margin-top:40px;
+    position: fixed;
+    left: 0px;
+    bottom: 0px;
+    background: #FFFFFF;
+    box-shadow: 0px -8px 6px rgba(0, 0, 0, 0.05);
+    width: 100vw;
+    height: 70px;
+    display: flex;
+    justify-content: space-evenly;
+}
+footer > input{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    margin: 10px;
+    width: 90vw;
+    padding-left: 15px;
+}
+footer > ion-icon {
+    width: 50px;
+    height: 60px;
+    margin-top: 5px;
+    margin-right: 10px;
+    margin-left: 15px;
+}
+.aside{
+    position: fixed;
+    top: -0px;
+    display: none;
+    align-items: top;
+    justify-content: space-between;
+    width: 100vw;
+    height: 100vh;
+    z-index: 2;
+    background-color: rgba(119, 116, 116, 0.5);
+}
+aside{
+    width: 350px;
+    position: relative;
+    padding: 10px;
+    background: rgb(60, 14, 26);
+    background: -moz-linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 40%, rgba(252,176,69,1) 100%);
+    background: -webkit-linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 40%, rgba(252,176,69,1) 100%);
+    background: linear-gradient(90deg,rgba(253,29,29,1) 20%, rgba(252,176,69,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#833ab4",endColorstr="#fcb045",GradientType=1);
+    border-radius: 6px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 35px;
+    height: 90vh;
+    margin-top: 10px;
+    margin-right: 10px;
+    border: 6px inset rgba(28,110,164,0.35);
+    border-radius: 31px 10px 12px 40px; 
+}
+.menu{
+    margin: 10px;
+    width: 300px;
+    display: flow-root;
+    text-align: start;
+}
+.menu:last-child{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+.conteiner{
+    flex-direction: flex;
+    text-align: start;
+}
+.transparencia{
+    width: 100vw;
+    height: 100vh;
+}
+section > article{
+    margin-bottom: 10px;
+    display: inline-flex;
+    align-items: center;
+    width: 100vw;
+    height: 40px;
+    border-radius: 2px;
+    border-bottom: 2px inset  rgba(119, 116, 116, 0.5);
+}
+.global{
+    background: #ffffff;
+}
+.log{
+    background: #DCDCDC;
+    border-bottom: 2px inset  rgba(87, 86, 86, 0.5);
+}
+.msgprive{
+    background: #FFDEDE;
+    border-bottom: 2px inset  rgba(174, 125, 125, 0.5);
+}
+.horario{
+    margin-left: 10px
+}
+.nome{
+    margin: 5px
+}
+.msg{
+    margin: 10px
+}
+.nomeremetente{
+    text-decoration: dotted;
+}
