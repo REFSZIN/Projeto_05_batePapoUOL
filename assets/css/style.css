@@ -3,14 +3,9 @@ body{
     width: 100vw;
     height: 100vh;
 }
-main{
-    width: 100vw;
-    height: 200px;
-    margin-top:100px;
-}
 nav{
     top: 0px;
-    z-index: 3;
+    z-index: 4;
     position: fixed;
     display: none;
     width: 100%;
@@ -25,6 +20,98 @@ nav{
     background: -webkit-radial-gradient(circle, rgba(242,225,123,1) 0%, rgba(255,0,0,1) 69%, rgba(255,0,0,1) 76%);
     background: radial-gradient(circle, rgba(242,225,123,1) 0%, rgba(255,0,0,1) 69%, rgba(255,0,0,1) 76%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#f2e17b",endColorstr="#ff0000",GradientType=1);
+}
+.aside{
+    position: fixed;
+    top: -0px;
+    display: flex;
+    justify-content: space-between;
+    width: 100vw;
+    height: 40vh;
+    height: 90%;
+    z-index: 2;
+    background-color: rgba(119, 116, 116, 0.5);
+}
+aside{
+    width: 300px;
+    position: relative;
+    padding: 10px;
+    background: rgb(60, 14, 26);
+    background: -moz-linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 40%, rgba(252,176,69,1) 100%);
+    background: -webkit-linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 40%, rgba(252,176,69,1) 100%);
+    background: linear-gradient(90deg,rgba(253,29,29,1) 20%, rgba(252,176,69,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#833ab4",endColorstr="#fcb045",GradientType=1);
+    border-radius: 6px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 35px;
+    height: 85vh;
+    margin-top: 10px;
+    margin-right: 10px;
+    border: 3px inset rgba(28,110,164,0.35);
+    border-radius: 31px 10px 12px 40px; 
+}
+.menu{
+    margin: 10px;
+    width: 300px;
+    display: flow-root;
+    text-align: start;
+}
+.menu:last-child{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+div > ion-icon:nth-child(1){
+    margin-top: 10px;
+    width: 30px;
+    height: 30px;
+}
+div > ion-icon:nth-child(3){
+    text-shadow: 0 0 10px rgb(20, 243, 0);
+    color: green;
+    width: 50px;
+    height: 25px;
+}
+aside > ion-icon{
+    position: absolute;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+}
+header{
+    position: fixed;
+    top: 0px;
+    z-index: 1;
+    left: 0px;
+    background: #FFFFFF;
+    box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.05);
+    width: 100vw;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+}
+header > img{
+    width: 90px;
+    height: 60px;
+    margin: 10px;
+}
+header > ion-icon{
+    width: 60px;
+    height: 50px;
+    margin: 18px;
+}
+main{
+    width: 100%;
+    height: 100%;
+    margin-top:100px;
+}
+.transparencia{
+    width: 100vw;
+    height: 100vh;
 }
 .logo_login{
     justify-content: center;
@@ -55,7 +142,7 @@ nav{
     font-size: 16px;
     background: #E7E7E7;
     border-radius: 19px;
-    margin-top: 50px;
+    margin-top: 10px;
     height: 40px;
     width: 120px;
 }
@@ -69,56 +156,49 @@ nav{
     align-items: center;
     text-align: center;
     color: #AEAEAE;
-    margin-top: 100px;
+    margin-top: 40px;
     border-radius: 19px;
     height: 60px;
     width: 240px;
 }
 .logo_login > img{
     width: 200PX;
-    margin-top: 100px;
+    margin-top: 10px;
 }
-header{
-    position: fixed;
-    top: 0px;
-    z-index: 1;
-    left: 0px;
-    background: #FFFFFF;
-    box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.05);
-    width: 100vw;
-    height: 80px;
-    display: flex;
-    justify-content: space-between;
+.conteiner{
+    flex-direction: flex;
+    text-align: start;
 }
-header > img{
-    width: 90px;
-    height: 60px;
-    margin: 10px;
-}
-header > ion-icon{
-    width: 60px;
-    height: 50px;
-    margin: 18px;
+section > article{
+    margin-bottom: 10px;
+    display: inline-flex;
+    align-items: center;
+    width: 100%;
+    height: 40px;
+    border-radius: 2px;
+    border-bottom: 2px inset  rgba(119, 116, 116, 0.5);
 }
 footer{
+    z-index: 3;
     margin-top:40px;
     position: fixed;
     left: 0px;
     bottom: 0px;
     background: #FFFFFF;
     box-shadow: 0px -8px 6px rgba(0, 0, 0, 0.05);
-    width: 100vw;
-    height: 70px;
+    width: 100%;
+    height: 80px;
     display: flex;
     justify-content: space-evenly;
 }
-footer > input{
+div > input{
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
     margin: 10px;
-    width: 90vw;
+    width: 100%;
+    height: 38px;
     padding-left: 15px;
 }
 footer > ion-icon {
@@ -128,66 +208,10 @@ footer > ion-icon {
     margin-right: 10px;
     margin-left: 15px;
 }
-.aside{
-    position: fixed;
-    top: -0px;
-    display: none;
-    align-items: top;
-    justify-content: space-between;
-    width: 100vw;
-    height: 100vh;
-    z-index: 2;
-    background-color: rgba(119, 116, 116, 0.5);
-}
-aside{
-    width: 350px;
-    position: relative;
-    padding: 10px;
-    background: rgb(60, 14, 26);
-    background: -moz-linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 40%, rgba(252,176,69,1) 100%);
-    background: -webkit-linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 40%, rgba(252,176,69,1) 100%);
-    background: linear-gradient(90deg,rgba(253,29,29,1) 20%, rgba(252,176,69,1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#833ab4",endColorstr="#fcb045",GradientType=1);
-    border-radius: 6px;
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 18px;
-    line-height: 35px;
-    height: 90vh;
-    margin-top: 10px;
-    margin-right: 10px;
-    border: 6px inset rgba(28,110,164,0.35);
-    border-radius: 31px 10px 12px 40px; 
-}
-.menu{
-    margin: 10px;
-    width: 300px;
-    display: flow-root;
-    text-align: start;
-}
-.menu:last-child{
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-}
-.conteiner{
-    flex-direction: flex;
-    text-align: start;
-}
-.transparencia{
-    width: 100vw;
-    height: 100vh;
-}
-section > article{
-    margin-bottom: 10px;
-    display: inline-flex;
-    align-items: center;
-    width: 100vw;
-    height: 40px;
-    border-radius: 2px;
-    border-bottom: 2px inset  rgba(119, 116, 116, 0.5);
+footer > ion-icon:nth-child(3) {
+    width: 50px;
+    height: 60px;
+    margin-right: 20px;
 }
 .global{
     background: #ffffff;
@@ -211,4 +235,16 @@ section > article{
 }
 .nomeremetente{
     text-decoration: dotted;
+}
+.lobbymsg{
+    padding-left: 10px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10px;
+}
+.divinput{
+    width: 80%;
+    height: 100%;
+    padding-bottom: 10px;
 }

@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" type="image/x-icon" href="./assets/images/ico.ico">
     <link rel="stylesheet" href="./assets/css/reset.css">
-    <link rel="stylesheet" href="./assets/css/responsivo.css">
     <link rel="stylesheet" href="./assets/css/style.css">
     <title>Bate-Papo UOL Projeto 5</title>
 </head>
@@ -25,20 +24,24 @@
     <section class="aside">
         <div class="transparencia"></div>
         <aside>
+            <ion-icon name="close-circle-outline"></ion-icon>
             <h4>Escolha um contato
             <br>para enviar mensagem:</h4>
             <article class="menu">
                 <div class="contatos">
                     <ion-icon name="people"></ion-icon>
                     <span>Todos</span>
+                    <ion-icon name="checkmark-outline"></ion-icon>
                 </div>
                 <div class="contatos">
                     <ion-icon name="person-circle"></ion-icon>
                     <span>João</span>
+                    <ion-icon name="checkmark-outline"></ion-icon>
                 </div>
                 <div class="contatos">
                     <ion-icon name="person-circle"></ion-icon>
                     <span>Maria</span>
+                    <ion-icon name="checkmark-outline"></ion-icon>
                 </div>
             </article>
             <h4>Escolha a visibilidade:</h4>
@@ -46,10 +49,12 @@
                 <div class="publico">
                     <ion-icon name="lock-closed"></ion-icon>
                     <span>Público</span>
+                    <ion-icon name="checkmark-outline"></ion-icon>
                 </div>
                 <div class="reservado">
                     <ion-icon name="lock-open"></ion-icon>
                     <span class="fix">Reservado</span>
+                    <ion-icon name="checkmark-outline"></ion-icon>
                 </div>
             </article>
         </aside>
@@ -80,7 +85,10 @@
     </main>
     <footer class="sendmsg">
         <ion-icon name="happy-outline"></ion-icon>
-        <input class="inputmsg" placeholder="Escreva aqui...">
+        <div class="divinput">
+            <input class="inputmsg" placeholder="Escreva aqui...">
+            <p class="lobbymsg">Enviando para Maria (reservadamente)</p>
+        </div>
         <ion-icon class="icosendmsg" name="paper-plane-outline"></ion-icon>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
