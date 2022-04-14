@@ -18,6 +18,9 @@ let participantes = [];
 function abrirMenu (){
     telaAside.classList.toggle("ativo")
 };
+function exitchat(){
+    location.reload();
+}
 function enterLogin (){
     enter = event.keyCode;
     if (enter === 13 && inputLogin.value.length >= 3){

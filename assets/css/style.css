@@ -1,6 +1,6 @@
 body{
     position: relative;
-    width: 100vw;
+    width: 99vw;
     height: 100vh;
 }
 nav{
@@ -92,7 +92,7 @@ header{
     left: 0rem;
     background: #FFFFFF;
     box-shadow: 0rem 0.375rem 0.375rem rgba(0, 0, 0, 0.05);
-    width: 100vw;
+    width: 100%;
     height: 5rem;
     display: flex;
     justify-content: space-between;
@@ -101,15 +101,17 @@ header > img{
     width: 5.625rem;
     height: 3.75rem;
     margin: 0.625rem;
+    margin-left: 1.625rem;
 }
 header > ion-icon{
     width: 3.75rem;
     height: 3.125rem;
     margin: 1.125rem;
+    margin-right: 1.625rem;
 }
 .transparencia{
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
 }
 .logo_login{
     justify-content: center;
@@ -183,16 +185,15 @@ section > article{
     border-bottom: 0.125rem inset  rgba(119, 116, 116, 0.5);
 }
 section{
-    margin-top: 100px;
     width: 100%;
-    height: 1rem;
+    height: auto;
     word-wrap: break-word;
 }
 section> article:last-child{
     margin-bottom: 5rem ;
 }
 footer{
-    z-index: 3;
+    z-index: 1;
     margin-top:20.5rem;
     position: fixed;
     left: 0rem;
@@ -203,6 +204,7 @@ footer{
     height: 4rem;
     display: flex;
     justify-content: space-evenly;
+    padding-bottom: 80px;
 }
 div > input{
     font-family: 'Roboto';
@@ -244,7 +246,9 @@ footer > ion-icon:nth-child(3) {
     margin: 0.3125rem
 }
 .msg{
-    margin: 0.625rem
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
 }
 .nomeremetente{
     text-decoration: dotted;
