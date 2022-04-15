@@ -6,6 +6,7 @@
 *, *:before, *::after{
     box-sizing: border-box;
 	scroll-behavior: smooth;
+	word-wrap: break-word;
 }
 a{
     text-decoration: none;

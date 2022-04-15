@@ -18,7 +18,11 @@ let participantes = [];
 function abrirMenu (){
     telaAside.classList.toggle("ativo")
 };
+function scrollAtomatico() {
+    window.scrollTo(0, document.body.scrollHeight);
+}
 function exitchat(){
+    telaLogin.classList.add("ativo");
     location.reload();
 }
 function enterLogin (){
@@ -33,8 +37,9 @@ function login (){
     promise.then(function (){
         telaLogin.classList.add("desativo");
         sucessoEntrada();
-        setInterval(sucessoEntrada, 100000000000);
+        setInterval(sucessoEntrada, 5000);
         setInterval(usuarioConectado, 5000);
+        setInterval(buscarParticipantes, 10000);
     });
     promise.catch(function (){
         alert(`Nome: ${meuUsuario} já cadrastado!`)
@@ -45,6 +50,7 @@ function sucessoEntrada (){
     promise.then(function(mensagens){
     console.log(mensagens.data);
     aplicarMsgs(mensagens.data);
+    scrollAtomatico()
     });
     promise.catch(function(){
     })
@@ -67,7 +73,6 @@ function aplicarMsgs (mensagens){
         const destino = mensagem.to;
         const time = mensagem.time;
         const texto= mensagem.text;
-
         if(type === "status") {
             listaMsg.innerHTML += 
             `<article class="log">

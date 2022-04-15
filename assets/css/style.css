@@ -187,7 +187,6 @@ section > article{
 section{
     width: 100%;
     height: auto;
-    word-wrap: break-word;
 }
 section> article:last-child{
     margin-bottom: 5rem ;
