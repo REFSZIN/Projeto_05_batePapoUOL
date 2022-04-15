@@ -37,9 +37,8 @@ function login (){
     promise.then(function (){
         telaLogin.classList.add("desativo");
         sucessoEntrada();
-        setInterval(sucessoEntrada, 5000);
+        setInterval(sucessoEntrada, 15000);
         setInterval(usuarioConectado, 5000);
-        setInterval(buscarParticipantes, 10000);
     });
     promise.catch(function (){
         alert(`Nome: ${meuUsuario} já cadrastado!`)
@@ -78,7 +77,7 @@ function aplicarMsgs (mensagens){
             `<article class="log">
             <span class="horario">${time}</span>
             <h2 class="nome">${rementente}:</h2>
-            <h3 class="msg">${texto}</h3>
+            <h3 class="msg"> ${texto}</h3>
             </article>`
         };
         if  (type === "message") {
@@ -86,7 +85,7 @@ function aplicarMsgs (mensagens){
             `<article class="global">
             <span class="horario">${time}</span>
             <h2 class="nome">${rementente}:</h2>
-            <h3 class="msg">${texto}</h3>
+            <h3 class="msg"> ${texto}</h3>
             </article>`
         };
         if(type === "private_message") {
@@ -94,8 +93,8 @@ function aplicarMsgs (mensagens){
             `<article class="msgprive">
             <span class="horario">${time}</span>
             <h2 class="nome">${rementente}:</h2>
-            <h2 class="nomeremetente"> para ${destino}:</h2>
-            <h3 class="msg">${texto}</h3>
+            <h2 class="nomeremetente">para ${destino}: </h2>
+            <h3 class="msg"> ${texto}</h3>
             </article>`
         };
     });
