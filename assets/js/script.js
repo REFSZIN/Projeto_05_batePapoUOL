@@ -13,8 +13,10 @@ let publicoCheck = document.querySelector(".publico ion-icon");
 let privadoCheck = document.querySelector(".reservado ion-icon");
 let userCheck = document.querySelector(".checkon");
 let meuUsuario = null;
+let destino;
 let participantes = [];
 //-------------------------------------------------------------------------
+getParticipantes();
 function abrirMenu (){
     telaAside.classList.toggle("ativo")
 };
@@ -37,8 +39,8 @@ function login (){
     promise.then(function (){
         telaLogin.classList.add("desativo");
         sucessoEntrada();
-        setInterval(sucessoEntrada, 15000);
         setInterval(usuarioConectado, 5000);
+        setInterval(sucessoEntrada, 3000);
     });
     promise.catch(function (){
         alert(`Nome: ${meuUsuario} já cadrastado!`)
@@ -47,11 +49,12 @@ function login (){
 function sucessoEntrada (){
     const promise= axios.get(`${UOLAPI}/messages`)
     promise.then(function(mensagens){
-    console.log(mensagens.data);
+    listaMsg.innerHTML = "";
     aplicarMsgs(mensagens.data);
     scrollAtomatico()
     });
     promise.catch(function(){
+        alert(`${meuUsuario} erro em carregar as mesagens!`)
     })
 };
 function usuarioConectado (){
@@ -60,10 +63,36 @@ function usuarioConectado (){
         console.log("Conectado")
     });
     promise.catch(function (){
-        alert(`${meuUsuario} voçe foi desconectado!`)
+        alert(`${meuUsuario} você foi desconectado!`)
         window.location.reload();
     });
 };
+function enviarMensagem(){
+    let env = event.keyCode;
+    if(env === 13 && input.value.length > 0){
+        let dataMsg = 
+        {
+            from: meuUsuario,
+            to: "Todos",
+            text: document.querySelector(".inputmsg").value,
+            type: "message",
+        };
+        console.log(dataMsg)
+    
+        const promise = axios.post(`${UOLAPI}/messages`, dataMsg)
+    
+        promise.then(function(){
+            sucessoEntrada()
+            input.value ="";
+        }
+        )
+        promise.catch(function(){
+            alert("Não foi possível enviar sua mensasgem");
+            exitchat();
+        })
+    }
+}
+
 function aplicarMsgs (mensagens){
     listaMsg.scrollIntoView();
     mensagens.forEach( mensagem => {
@@ -88,14 +117,32 @@ function aplicarMsgs (mensagens){
             <h3 class="msg"> ${texto}</h3>
             </article>`
         };
-        if(type === "private_message") {
+        if(type === "private_message" && destino ===  meuUsuario) {
             listaMsg.innerHTML +=
             `<article class="msgprive">
             <span class="horario">${time}</span>
-            <h2 class="nome">${rementente}:</h2>
+            <h2 class="nome">${rementente}</h2>
             <h2 class="nomeremetente">para ${destino}: </h2>
             <h3 class="msg"> ${texto}</h3>
             </article>`
         };
     });
 };
+
+function getParticipantes() {
+    const promise = axios.get(`${UOLAPI}/participants`);
+    promise.then(function(response) {
+        participantes = response.data;
+        participantes.forEach(participante => {
+            listaUser.innerHTML +=`
+                <div class="contatos">
+                    <ion-icon name="person-circle"></ion-icon>
+                    <span>${participante.name}</span>
+                    <ion-icon class="checkon" name="checkmark-outline"></ion-icon>
+                </div>
+            `
+        })
+    }).catch( function(response){
+        console.log(response.error)
+    })
+}
