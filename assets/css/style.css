@@ -69,6 +69,15 @@ aside{
     height: 15.625rem;
     margin-top: 1.25rem;
 }
+ion-icon:hover{
+    cursor: pointer;
+}
+header > img:hover{
+    cursor: pointer;
+}
+button:hover{
+    cursor: pointer;
+}
 div > ion-icon:nth-child(1){
     width: 1.875rem;
     height: 1.25rem;
