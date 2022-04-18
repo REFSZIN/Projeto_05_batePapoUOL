@@ -61,12 +61,12 @@ aside{
     width: 21.875rem;
 }
 .menuvisi{
-    display: inline-flex;
+    display: inline;
     flex-direction: column;
-    text-align: left;
+    text-align: right;
     position: relative;
-    width: 18.75rem;
-    height: 5.625rem;
+    width: 19.75rem;
+    height: 15.625rem;
     margin-top: 1.25rem;
 }
 div > ion-icon:nth-child(1){
@@ -235,6 +235,9 @@ footer > ion-icon:nth-child(3) {
     background: #DCDCDC;
     border-bottom: 0.125rem inset  rgba(87, 86, 86, 0.5);
 }
+.ajuste{
+    margin-top: 10px;
+}
 .msgprive{
     background: #FFDEDE;
     border-bottom: 0.125rem inset  rgba(174, 125, 125, 0.5);
@@ -243,7 +246,6 @@ footer > ion-icon:nth-child(3) {
     margin-left: 0.625rem
 }
 .nome{
-    word-break: break-all;
     margin: 0.3125rem
 }
 .msg{
@@ -251,6 +253,9 @@ footer > ion-icon:nth-child(3) {
     display: inline-flex;
     justify-content: center;
     align-items: center;
+}
+.contatos{
+    width: 180px;
 }
 .nomeremetente{
     word-break: break-all;
