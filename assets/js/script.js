@@ -21,7 +21,7 @@ function abrirMenu (){
     telaAside.classList.toggle("ativo")
 };
 function scrollAtomatico() {
-    window.scrollTo(0, document.body.scrollHeight);
+    window.scrollTo(0, 1000);
 }
 function exitchat(){
     telaLogin.classList.add("ativo");
